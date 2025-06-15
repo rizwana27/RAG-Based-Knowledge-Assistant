@@ -1,7 +1,7 @@
 import logging
 from typing import List, Dict, Union, Optional
 from app.services.storage.base_storage import BaseStorage
-from app.db.models import Conversation, Message
+from app.db.models import Conversation, Message, Document
 
 logger = logging.getLogger(__name__)
 
@@ -136,3 +136,29 @@ class StorageService:
         messages = self.backend.get_messages_by_conversation(conversation_id)
         logger.info(f"Retrieved {len(messages)} messages for conversation '{conversation_id}'")
         return messages
+    
+    def document_exists(self, name: str) -> bool:
+        """
+        Check if a document with the given name exists in the storage backend.
+
+        Parameters
+        ----------
+        name : str
+            The name of the document to check for existence.
+
+        Returns
+        -------
+        bool
+            True if the document exists, False otherwise.
+        """
+        logger.debug(f"Checking if document with name '{name}' exists in storage backend.")
+        try:
+            exists = self.backend.document_exists(name)
+            if exists:
+                logger.info(f"Document '{name}' already exists in storage.")
+            else:
+                logger.info(f"Document '{name}' does not exist in storage.")
+            return exists
+        except Exception as e:
+            logger.exception(f"Failed to check document existence for '{name}': {e}")
+            raise

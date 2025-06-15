@@ -178,3 +178,19 @@ class SQLiteStorage(BaseStorage):
         )
         logger.info(f"Fetched {len(messages)} messages for conversation ID: {conversation_id}")
         return messages
+    
+    def document_exists(self, name: str) -> bool:
+        """
+        Query the database to check if a document with the given name exists.
+
+        Parameters
+        ----------
+        name : str
+            Name of the document.
+
+        Returns
+        -------
+        bool
+            True if document exists, False otherwise.
+        """
+        return self.db.query(Document).filter(Document.name == name).first() is not None
