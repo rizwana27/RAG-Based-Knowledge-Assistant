@@ -110,3 +110,12 @@ def test_add_and_get_messages(storage):
     assert len(messages) == 2
     assert messages[0].role == "user"
     assert messages[1].role == "assistant"
+
+
+def test_document_exists(storage):
+    doc_name = "existing_doc.txt"
+    storage.store_document(name=doc_name, document_metadata={}, path="/some/path")
+
+    # Act & Assert
+    assert storage.document_exists(doc_name) is True
+    assert storage.document_exists("non_existing_doc.txt") is False

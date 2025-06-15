@@ -1,13 +1,12 @@
 import pytest
 from unittest.mock import MagicMock
 from app.services.storage.storage_service import StorageService
-from app.db.models import Conversation, Message
+from app.db.models import Conversation, Message, Document
 
 
 @pytest.fixture
 def mock_backend():
     return MagicMock()
-
 
 @pytest.fixture
 def storage_service(mock_backend):
@@ -44,3 +43,13 @@ def test_add_message_calls_backend(storage_service, mock_backend):
 def test_get_messages_by_conversation_calls_backend(storage_service, mock_backend):
     storage_service.get_messages_by_conversation("conv-123")
     mock_backend.get_messages_by_conversation.assert_called_once_with("conv-123")
+
+def test_document_exists_calls_backend():
+    mock_backend = MagicMock()
+    mock_backend.document_exists.return_value = True
+
+    service = StorageService(backend=mock_backend)
+    exists = service.document_exists("test.pdf")
+
+    mock_backend.document_exists.assert_called_once_with("test.pdf")
+    assert exists is True

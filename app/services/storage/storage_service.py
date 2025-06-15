@@ -139,26 +139,13 @@ class StorageService:
     
     def document_exists(self, name: str) -> bool:
         """
-        Check if a document with the given name exists in the storage backend.
-
-        Parameters
-        ----------
-        name : str
-            The name of the document to check for existence.
-
-        Returns
-        -------
-        bool
-            True if the document exists, False otherwise.
+        Check if a document with the given name exists via the backend.
         """
-        logger.debug(f"Checking if document with name '{name}' exists in storage backend.")
+        logger.debug(f"Checking if document '{name}' exists")
         try:
             exists = self.backend.document_exists(name)
-            if exists:
-                logger.info(f"Document '{name}' already exists in storage.")
-            else:
-                logger.info(f"Document '{name}' does not exist in storage.")
+            logger.info(f"Document '{name}' exists: {exists}")
             return exists
         except Exception as e:
-            logger.exception(f"Failed to check document existence for '{name}': {e}")
+            logger.exception(f"Error checking if document exists: {e}")
             raise
