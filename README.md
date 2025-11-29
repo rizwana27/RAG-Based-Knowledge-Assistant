@@ -16,7 +16,7 @@ The system is composed of independent but connected subsystems:
 
 A high-level architecture diagram is available below:
 
-![High-Level Architecture](docs/HighLevelArchitecturalDiagram.png)
+![High-Level Architecture](docs/HighLevelArchitectureDiagram.png)
 
 > Additional diagrams and design notes are available in the `docs/` directory.
 
